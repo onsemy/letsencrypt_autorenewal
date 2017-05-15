@@ -1,0 +1,9 @@
+[Unit]
+Description=Let's Encrypt renewal
+Requires=certcopy.service
+
+[Service]
+Type=oneshot
+ExecStartPre=/usr/sbin/service nginx stop
+ExecStart=/usr/bin/letsencrypt renew
+ExecStartPost=/usr/sbin/service nginx start
