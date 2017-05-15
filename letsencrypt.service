@@ -1,6 +1,6 @@
 [Unit]
 Description=Let's Encrypt renewal
-Requires=certcopy.service
+#Requires=certcopy.service
 
 [Service]
 Type=oneshot
